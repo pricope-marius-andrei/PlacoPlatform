@@ -1,0 +1,60 @@
+@import "./../common/button.css";
+
+.my_ads {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+  
+.my_ads .center_work {
+    background-color: var(--gray);
+    height: 80%;
+    width: 90%;
+    overflow-y: auto;
+}
+
+#ads_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+
+.ad {
+    background-color: var(--white);
+    display: flex;
+    height: 200px;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px 10px 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+.ad .img_ad {
+    height: 100%;
+    border-start-start-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    .ad .title_ad {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .ad {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .ad .img_ad {
+        height: 100px;
+        width: 100px;
+        border-start-start-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+}

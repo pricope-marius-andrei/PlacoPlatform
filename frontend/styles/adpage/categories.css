@@ -1,0 +1,23 @@
+#categories {
+    display: flex;
+    align-items: center;
+}
+
+#new_category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    height: 20px;
+    width: 20px;
+    padding: 20px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 100%;
+    margin-left: 5px;
+    box-shadow: 2px 2px 20px -12px var(--dark-blue);
+}
+
+#new_category:hover {
+    box-shadow: 2px 2px 20px -10px var(--dark-blue);
+}

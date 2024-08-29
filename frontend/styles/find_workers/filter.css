@@ -1,0 +1,73 @@
+.filter-announcements {
+    display: flex;
+    flex: 30%;
+    height: fit-content;
+    z-index: 0;
+    flex-direction: column;
+    background-color: var(--gray);
+    padding: 5px;
+    width: 100%;
+}
+
+@media screen and (max-width:1000) {
+    .filter-announcements {
+        width: 400px;
+    }
+}
+
+.salary, .location {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.salary .interval {
+    width: 100%;
+}
+
+.salary .option {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.salary h1 {
+    font-size: small;
+    color: aqua;
+}
+
+hr {
+    margin-top: 20px;
+}
+
+.filter-announcements form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+form button {
+    display: flex;
+    justify-content: center;
+}
+
+select {
+    color: var(--dark-blue);
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+.filter-button {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1300px) {
+    .filter-announcements {
+        align-items: center;
+    }
+}

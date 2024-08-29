@@ -1,0 +1,59 @@
+@import "ad.css";
+@import "categories.css";
+@import "workers_list.css";
+@import "../common/button.css";
+@import "../colors.css";
+@import "../global.css";
+
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+#edit_page {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 100px;
+    /* background-color: aqua; */
+}
+
+input, textarea {
+    padding: 20px;
+    height: 30px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px -15px var(--dark-blue);
+}
+
+input:focus, textarea:focus {
+    box-shadow: 2px 2px 20px -10px var(--dark-blue);;
+}
+
+textarea {
+    resize: vertical;
+    max-height: 500px;
+    min-height: 30px;
+}
+
+@media screen and (max-width: 1700px) {
+    #edit_page {
+        flex-direction: column;
+    }
+
+    #ad_section {
+        width: 100%;
+    }
+
+    #workers_list {
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #edit_page {
+        padding: 20px;
+    }
+}

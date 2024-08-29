@@ -1,0 +1,95 @@
+#workers_list {
+    margin-bottom: auto;
+}
+
+#workers_list h1 {
+    width: 500px;
+    text-align: center;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 10px 0 10px 0;
+}
+
+#workers_list #list {
+    height: 800px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--gray);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow-y: scroll;
+    padding: 10px 0 10px 0;
+}
+
+.worker_container {
+    width: 90%;
+    background-color: var(--white);
+    padding: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    #worker_list, #workers_list #list, #workers_list h1 {
+       width: 220px;
+    }
+    .worker_container {
+        display: flex;
+        flex-direction: column;
+        width: 220px;
+    }
+}
+
+.worker_img {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.worker_offer {
+    font-weight: bold;
+}
+
+.accept_button, .reject_button, .pending_button {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border: 0;
+    border-radius: 100%;
+}
+
+.accept_button {
+    background-color: var(--cyan);
+    margin-right: 5px;
+}
+
+.accept_button:hover {
+    opacity: 90%;
+}
+
+.reject_button {
+    background-color: var(--error-color);
+    
+}
+
+.reject_button:hover {
+    opacity: 90%;
+}
+
+.pending_button {
+    background-color: var(--dark-gray);
+}
+
+.pending_button:hover {
+    opacity: 90%;
+}

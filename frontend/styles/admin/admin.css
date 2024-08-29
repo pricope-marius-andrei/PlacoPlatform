@@ -1,0 +1,418 @@
+@import '../colors.css';
+@import '../global.css';
+@import '../common/button.css';
+
+input, textarea {
+    padding: 20px;
+    height: 30px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px -15px var(--dark-blue);
+}
+
+input:focus, textarea:focus {
+    box-shadow: 2px 2px 20px -10px var(--dark-blue);;
+}
+
+textarea {
+    resize: vertical;
+    max-height: 500px;
+    min-height: 30px;
+}
+
+.logoutbutton {
+    position: fixed;
+    bottom: 20px; 
+    right: 70px; 
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+.tablinkadmin {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 25px;
+    width: 33.33%;
+    border-bottom: 4px solid var(--orange-yellow);
+  }
+  
+.tabcontentadmin {
+    background-color: var(--white);
+    display: none;
+    height: calc(100vh - 55px);
+}
+
+.work_admin {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.work_admin .center_work_admin {
+    background-color: var(--gray);
+    height: 80%;
+    width: 90%;
+    overflow-y: auto;
+}
+
+.search_bar_admin {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .search_input_admin {
+    border: none;
+    box-sizing: border-box;
+    width: 70%;
+    height: 20px;
+    color: var(--dark-blue);
+    height: 30px;
+    border-radius: 7px;
+    padding-left: 30px;
+  }
+  
+  .search_icon_admin {
+    position: absolute;
+    left: 15.5%;
+    font-size: 1.2em;
+    color: var(--dark-blue);
+  }
+  
+.mail_admin {
+    height: auto;
+    width: 90%;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+.three_things {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.two_things {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 20%;
+}
+  
+.mail_subject_admin, .mail_description_admin, .mail_date_admin {
+    color: var(--dark-blue);
+}
+
+
+
+.two_things .btn_admin_work_delete {
+    background-color: transparent;
+    color: var(--dark-blue);
+    border: solid var(--gray);
+    margin: 0.5% 0%;
+    padding: 0% 2%;
+    font-weight: 1000;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.two_things .btn_admin_work_view {
+    background-color: transparent;
+    color: var(--dark-blue);
+    border: solid var(--gray);
+    margin: 1% 0%;
+    padding: 0% 2%;
+    font-weight: 1000;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn_admin_work_delete:hover {
+    background-color: var(--error-color);  
+}
+
+.btn_admin_work_view:hover {
+    background-color: var(--orange-yellow);  
+}
+
+.inbox_admin {
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+.inbox_admin .left_side_admin {
+    background-color: var(--gray);
+    height: 80%;
+    width: 30%;
+    overflow-y: auto;
+}
+  
+.inbox_admin .right_side_admin {
+    background-color: var(--gray);
+    height: 80%;
+    width: 62%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.search_bar_inbox_admin {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .search_input_admin_inbox {
+    border: none;
+    box-sizing: border-box;
+    width: 70%;
+    height: 20px;
+    color: var(--dark-blue);
+    height: 30px;
+    border-radius: 7px;
+    padding-left: 30px;
+  }
+  
+  .search_icon_admin_inbox {
+    position: absolute;
+    left: 15.5%;
+    font-size: 1.2em;
+    color: var(--dark-blue);
+  }
+
+.user_admin {
+    height: auto;
+    width: 90%;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.btn_admin_inbox_delete {
+    background-color: transparent;
+    color: var(--dark-blue);
+    border: solid var(--gray);
+    font-weight: 1000;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.btn_admin_inbox_view {
+    background-color: transparent;
+    color: var(--dark-blue);
+    border: solid var(--gray);
+    font-weight: 1000;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.btn_admin_inbox_delete:hover {
+    background-color: var(--error-color); 
+}
+
+.btn_admin_inbox_view:hover {
+    background-color: var(--orange-yellow);  
+}
+
+.profile_info_admin {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile_info_admin .profile_image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 3%;
+    margin-left: 3%;
+}
+
+.profile_info_admin .profile_name {
+    border-radius: 50%;
+    margin-top: 9%;
+    margin-left: 3%;
+    color: var(--dark-blue);
+}
+
+.user_info {
+    display: flex;
+    flex-direction: row;
+}
+
+.user_info .user_info_details{
+    display: flex;
+    margin-bottom: 10%;
+    flex-direction: column;
+    padding: 5% 5%; 
+    width: 25%;
+}
+
+.user_info_details .details{
+    color: var(--dark-blue);
+}
+
+.chat_admin {
+    width: 55%;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: end;
+    background-color: var(--white);
+    border-radius: 5px;
+    margin-left: 45px;
+    margin-bottom: 10%;
+}
+
+.message_input_field_admin {
+    flex: 1;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.send_button_admin {
+    background-color: var(--orange-yellow);
+    color: var(--dark-blue);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    height: 40px;
+}
+
+@media screen and (max-width: 1200px) {
+    .mail_admin {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .three_things {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .two_things {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .two_things .btn_admin_work_delete {
+        background-color: transparent;
+        color: var(--dark-blue);
+        border: solid var(--gray);
+        margin: 0.5% 0%;
+        padding: 0% 2%;
+        font-weight: 1000;
+        cursor: pointer;
+        border-radius: 5px;
+        height: 45px;
+    }
+    
+    .two_things .btn_admin_work_view {
+        background-color: transparent;
+        color: var(--dark-blue);
+        border: solid var(--gray);
+        margin: 0.5% 0%;
+        padding: 0% 2%;
+        font-weight: 1000;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .btn_admin_work_delete:hover {
+        background-color: var(--error-color);  
+    }
+    
+    .btn_admin_work_view:hover {
+        background-color: var(--orange-yellow);  
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .inbox_admin {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .inbox_admin .left_side_admin {
+        margin-top: 20px;
+        background-color: var(--gray);
+        height: 1000px;
+        width: 90%;
+        overflow-y: auto;
+        margin-bottom: 20px;
+    }
+
+    .user_admin .name_of_user {
+        margin-top: 30px;
+    }
+
+    .user_admin .btn_admin_inbox_delete {
+        height: 40px;
+    }
+
+    .user_admin .btn_admin_inbox_view {
+        height: 40px;
+    }
+
+    .inbox_admin .right_side_admin {
+        background-color: var(--gray);
+        height: 1000px;
+        width: 90%;
+        overflow-y: auto;
+        margin-bottom: 20px;
+    }
+
+
+
+}

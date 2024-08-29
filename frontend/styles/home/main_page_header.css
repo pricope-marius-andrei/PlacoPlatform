@@ -1,0 +1,132 @@
+@import '../colors.css';
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+.mainPageHeader {
+    background-color: var(--dark-blue);
+    top: 0;
+    position: sticky;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0em 5px 2em #02020f ;
+
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    margin: 1em 0em 1em 6em;
+}
+
+.burger-menu-icon {
+    display: none;
+}
+
+.linksHomePage {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 30px;
+    gap: 50px;
+    font-size: 25px;
+}
+
+.linksHomePage a {
+    color: var(--white);
+    display: flex;
+    cursor: pointer;
+    transition: 0.3s all ease;
+    position: relative;
+}
+
+.linksHomePage a::before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: var(--orange-yellow);
+    width: 0;
+    transition: 0.3s ease all;
+    bottom: 0;
+    border-radius: 50px;
+}
+
+.linksHomePage a:hover{
+    color: var(--orange-yellow);
+}
+
+.linksHomePage a:hover::before{
+    width: 100%;
+}
+
+
+.showBurger {
+    display: flex;
+    align-items: end;
+    position: absolute;
+    height: 100vh;
+    background-color: var(--dark-blue);
+    padding: 20px;
+    top: 90px;
+    right: 0;
+    flex-direction: column;
+}
+
+.hideBurger {
+    display: none;
+}
+
+
+@media screen and (max-width: 750px) {
+    .burger-menu-icon {
+        display: flex;
+        width: 60px;
+        height: 60px;
+        padding: 5px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    .linksHomePage {
+        display: none;
+        color: var(--orange-yellow);
+    }
+}
+
+.showBurger a {
+    color: var(--white);
+    font-size: x-large;
+    margin: 5px 0 5px 0;
+    display: flex;
+    cursor: pointer;
+    transition: 0.3s all ease;
+    position: relative;
+}
+
+.showBurger a::before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: var(--orange-yellow);
+    width: 0;
+    transition: 0.3s ease all;
+    bottom: 0;
+    border-radius: 50px;
+}
+
+.showBurger a:hover{
+    color: var(--orange-yellow);
+}
+
+.showBurger a:hover::before{
+    width: 100%;
+}
+
+

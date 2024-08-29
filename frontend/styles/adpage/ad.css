@@ -1,0 +1,27 @@
+#ad_section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#ad_img {
+    height: 500px;
+    border-radius: 20px;
+}
+
+#description {
+    height: 200px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: scroll;
+}
+
+#category_input {
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    #ad_img {
+        height: 150px;
+    }
+}

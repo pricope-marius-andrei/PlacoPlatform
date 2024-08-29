@@ -1,0 +1,46 @@
+.details {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .details {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #drop-area {
+        margin-bottom: 10px;
+    }
+}
+
+
+#drop-area {
+    height: 300px;
+    width: 300px;
+    background-color: var(--dark-blue);
+    border-radius: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+#drop-area:hover {
+   background-color: var(--light-blue);
+}
+
+#img-view {
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;   
+}
+
+#update_details {
+   display: flex;
+   flex-direction: column;
+}

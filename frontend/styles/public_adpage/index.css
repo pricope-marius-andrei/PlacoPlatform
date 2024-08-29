@@ -1,0 +1,29 @@
+@import "ad.css";
+@import "categories.css";
+@import "../common/button.css";
+@import "../colors.css";
+@import "../global.css";
+
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+input {
+    padding: 20px;
+    height: 30px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px -15px var(--dark-blue);
+}
+
+input:focus {
+    box-shadow: 2px 2px 20px -10px var(--dark-blue);;
+}
+
+@media screen and (max-width: 1700px) {
+    #ad_section {
+        width: 100%;
+    }
+}

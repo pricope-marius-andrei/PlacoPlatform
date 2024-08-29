@@ -1,0 +1,75 @@
+#create-ad-form .input-text {
+    padding: 20px;
+    height: 30px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px -15px var(--dark-blue);
+}
+
+#create-ad-form .input-text:focus {
+    box-shadow: 2px 2px 20px -10px var(--dark-blue);
+}
+
+
+#create-ad-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media screen and (max-width:1400px) {
+    
+    #create-ad-form {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    #drop-area {
+        display: flex;
+        width: 500px;
+        height: 500px;
+    }
+}
+
+
+.form-elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+}
+
+.form-elements button {
+    border: 0;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--orange-yellow);
+    color: var(--white);
+    font-size: x-large;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+#drop-area {
+    background-color: var(--dark-blue);
+    border-radius: 40px;
+    background-position: center;
+    background-size: cover;
+}
+
+#drop-area:hover {
+   background-color: var(--light-blue);
+}
+
+#img-view {
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+    height: 500px;
+    width: 700px;
+    justify-content: center;
+    align-items: center;   
+}

@@ -1,0 +1,27 @@
+@import "./header_jobs.css";
+@import "./filter.css";
+@import "./profile.css";
+@import "../common/button.css";
+
+.grid-announcements {
+    background-color: var(--gray);
+    display: flex;
+    align-items: start;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 1300px) {
+    .grid-announcements {
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        align-items: center;
+        width: 400px;
+    }
+}
+
+hr {
+    color: var(--black);
+}

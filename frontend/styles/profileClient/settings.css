@@ -1,0 +1,77 @@
+.settings {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings .center_settings {
+    background-color: var(--gray);
+    height: 80%;
+    width: 90%;
+    overflow-y: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.input_settings {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile_details {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+    color: var(--white);
+}
+
+.profile_details .email {
+    font-size: 30px;
+    border-radius: 50px;
+    color: var(--dark-blue);
+}
+
+.profile_details .changeEmail {
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--gray);
+    padding: 5px 10px 5px 10px;
+}
+
+.profile_details .changePassword {
+    font-size: 30px;
+    color: var(--dark-blue);
+}
+
+.profile_details .currentPass {
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--gray);
+    padding: 5px 10px 5px 10px;
+}
+
+.profile_details .newPass {
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--gray);
+    padding: 5px 10px 5px 10px;
+}
+
+.profile_details .btnSave {
+    background-color: var(--orange-yellow);
+    padding: 1em 5em 1em 5em;
+    color: var(--dark-blue);
+    border-radius: 10px;
+    border: var(--orange-yellow) solid;
+    font-weight: bold;
+    font-size: large;
+    margin: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}

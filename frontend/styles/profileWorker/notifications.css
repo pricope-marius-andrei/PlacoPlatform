@@ -1,0 +1,29 @@
+input {
+    padding: 20px;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px -15px var(--dark-blue);
+}
+
+input:focus {
+    box-shadow: 2px 2px 20px -10px var(--dark-blue);;
+}
+
+#notifications {
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 100px;
+    margin-top: 10px;
+}
+
+.notify {
+    padding: 50px;
+    box-shadow: 2px 2px 20px -15px var(--dark-blue);
+}
+
+#notifications_list {
+    overflow-y: scroll;
+    height: 100%;
+}

@@ -1,0 +1,312 @@
+@import './../global.css';
+@import './details.css';
+@import './my_ads.css';
+@import './skills.css';
+@import './notifications.css';
+@import './settings.css';
+
+.input-text {
+  padding: 20px;
+  height: 30px;
+  width: 400px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 20px -15px var(--dark-blue);
+ 
+}
+
+.input-text:focus {
+  box-shadow: 2px 2px 20px -10px var(--dark-blue);
+}
+
+.textarea-style {
+  resize: vertical;
+  max-height: 250px;
+  min-height: 50px;
+}
+
+.tablink {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    display: block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 25px;
+    width: 25%;
+    border-bottom: 4px solid var(--orange-yellow);
+  }
+  
+.tabcontent {
+    /* padding: 100px; */
+    background-color: var(--white);
+    display: flex;
+    height: 100vh;
+}
+
+.user_profile {
+  display: flex;
+  flex-direction: row;
+}
+
+.user_profile .imgProfileSmall {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.user_profile .user_name {
+  color: var(--dark-blue);
+  font-family: Arial;
+  font-size: 25px;
+  margin-left: 3%;
+  margin-top: 5%;
+}
+
+.message_input {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.message_input_field {
+  flex: 1;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  padding: 0 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.send_button {
+  background-color: var(--orange-yellow);
+  color: var(--dark-blue);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+.search_bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.search_input {
+  border: none;
+  box-sizing: border-box;
+  width: 70%;
+  height: 20px;
+  color: var(--dark-blue);
+  height: 30px;
+  border-radius: 7px;
+  padding-left: 30px;
+}
+
+.search_icon {
+  position: absolute;
+  left: 15.5%;
+  font-size: 1.2em;
+  color: var(--dark-blue);
+}
+
+.mail {
+  height: auto;
+  width: 90%;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-left: 5%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  
+}
+
+.mail_subject, .mail_description, .mail_date {
+  color: var(--dark-blue);
+}
+
+.btn_help_work {
+  position: fixed;
+  bottom: 20px; 
+  right: 70px; 
+  background-color: var(--dark-blue);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn_help_inbox {
+  position: fixed;
+  bottom: 20px; 
+  right: 70px; 
+  background-color: var(--dark-blue);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn_help_setting {
+  position: fixed;
+  bottom: 20px; 
+  right: 70px; 
+  background-color: var(--dark-blue);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tablinks {
+  display: flex;
+  position: fixed;
+  width: 100%;
+}
+
+#tablinksHamburger {
+  display: none;
+}
+
+.burger-menu-icon {
+  display: none;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+  .tablinks {
+    display: none;
+  }
+
+  #tablinksHamburger {
+    display: none;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-blue);
+    left: 0;
+    z-index: 2;
+    flex-direction: column;
+  }
+
+  .burger-menu {
+    background-color: var(--dark-blue);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    cursor: pointer;
+  }
+
+  .burger-menu img {
+    height: 60px;
+    display: flex;
+  }
+
+  .inbox {
+    display: flex;
+    flex-direction: column;
+  }  
+  .inbox .left_side_work {
+    margin-top: 20px;
+    background-color: var(--gray);
+    height: 80%;
+    width: 80%;
+    overflow-y: auto;
+  }
+  .inbox .right_side_work {
+    background-color: var(--gray);
+    margin-top: 40px;
+    height: 80%;
+    width: 80%;
+    overflow-y: auto;
+    position: relative;
+  }
+  .btn_help_work { 
+    position: absolute;
+    bottom: -5px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btn_help_inbox { 
+    position: absolute;
+    bottom: -50px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btn_help_setting { 
+    position: absolute;
+    bottom: -5px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .settings .center_settings {
+    background-color: var(--gray);
+    height: 80%;
+    width: 90%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile_edit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile_details {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 50px;
+    color: var(--white);
+    background-color: var(--white);
+  } 
+  
+  .profile_details .btnSave {
+    margin-top: 40px;
+}
+
+}
+
