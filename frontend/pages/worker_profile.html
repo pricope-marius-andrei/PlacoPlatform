@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/profileWorker/profile.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="icon" type="image/x-icon" href="../assets/images/logo.png">
+    <script src="https://kit.fontawesome.com/135aab77de.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Profile</title>
+</head>
+<body class="profile_body">
+
+
+    <div class="burger-menu" id="burger">
+      <img src="../assets/icons/burger-menu.svg" alt="Burger Menu Icon" class="burger-menu-icon">
+    </div>
+
+    <div class="tablinks">
+      <button class="tablink" onclick="openPage('Home', this)"><i class='bx bxs-home'></i></button>
+      <button class="tablink" onclick="openPage('DETAILS', this)" id="defaultOpen">DETAILS</button>
+      <button class="tablink" onclick="openPage('SKILLS', this)">SKILLS</button>
+      <button class="tablink" onclick="openPage('MY_WORK', this)">MY WORK</button>
+      <button class="tablink" onclick="openPage('NOTIFICATIONS', this)">NOTIFICATIONS</button>
+      <button class="tablink" onclick="openPage('SETTING', this)">SETTINGS</button>
+    </div>
+
+    <div id="tablinksHamburger">
+      <button class="tablink" onclick="openPage('Home', this)"><i class='bx bxs-home'></i></button>
+      <button class="tablink" onclick="openPage('DETAILS', this)" id="defaultOpen">DETAILS</button>
+      <button class="tablink" onclick="openPage('SKILLS', this)">SKILLS</button>
+      <button class="tablink" onclick="openPage('MY_WORK', this)">MY WORK</button>
+      <button class="tablink" onclick="openPage('NOTIFICATIONS', this)">NOTIFICATIONS</button>
+      <button class="tablink" onclick="openPage('SETTING', this)">SETTINGS</button>
+    </div>
+
+    
+    <div id="DETAILS" class="tabcontent details">
+      <label for="upload-photo" id="drop-area">
+        <input id="upload-photo" type="file" accept="image/*" hidden>
+        <div id="img-view">
+          <span>
+            <i class="fa-solid fa-cloud-arrow-up fa-2xl" style="color: #f0f2f4;"></i>
+          </span>
+          <p>Drag and drop an image or click here to upload</p>
+        </div>
+      </label>
+      <script src="../scripts/dragAndDrop.js"></script>
+      <div id="update_details">
+        <input class="input-text" id="contact" style="color: black;" placeholder="Add contact">
+        <textarea placeholder="Add description" class="input-text textarea-style" id="description-input"></textarea>
+        <button class="solid-button" id="saveButton">Save changes</button>
+      </div>
+    </div>
+
+    <div id="SKILLS" class="tabcontent skills">
+      <div id="content">
+        <section id="skills">
+          <h1 style="margin-bottom: 50px;">Skills</h1>
+          <div id="skills_list">
+              <script type="module" src="../scripts/workerSkills/getSkills.js"></script>
+          </div>
+        </section>
+
+        <div id="new_skill_section">
+          <input class="input-text" placeholder="Add category" id="category-input">
+          <textarea class="input-text textarea-style" placeholder="Add a description" id="skills-description-input"></textarea>
+          <input id="skills-upload-photo" class="input-upload-photo" type="file" accept="image/*">
+          </label>
+          
+          <button id="new_skill" class="solid-button">Add new skill</button>
+        </div> 
+      </div>
+    </div>
+
+    <script src="../scripts/bugerProfile.js"></script>
+      <div id="MY_WORK" class="tabcontent my_ads" style="display: flex; flex-direction: column;">
+        <div class="search_bar">
+          <input type="text" placeholder="Search work" class="search_input">
+          <i class='bx bx-search search_icon'></i>
+        </div>
+        <div id="ads_list" class="center_work all_mails">
+            <script type="module" src="./../scripts/workerWork/index.js"></script>
+        </div>
+      </div>
+
+      <div id="NOTIFICATIONS" class="tabcontent notifications">
+        <section id="notifications">
+          <h1>Notifications</h1>
+          <div id="notifications_list">
+              <script type="module" src="../scripts/workerNotifications/notifications.js"></script>
+          </div>
+      </section>
+      </div>
+
+      <div id="SETTING" class="tabcontent settings">
+          <div class="profile_details">
+            <div class="input_settings">
+              <label for="changeEmail" class="email">Email</label>
+              <input type="email" placeholder="Enter new email" class="changeEmail" id="email-input">
+            </div>
+            <div class="input_settings">
+              <label for="currentPass" class="changePassword">Change Password</label>
+              <input type="text" placeholder="Enter your current password" class="currentPass" id="currentPass-input">
+              <input type="text" placeholder="Enter your new password" class="newPass" id="newPass-input">
+            </div>
+            <button class="btnSave" id="btnSave">Save Changes</button>
+          </div>
+        <button class="btn_help_setting" id="logoutButton">Logout</button>
+      </div>
+
+      <script type="module" src="../scripts/changePass/worker/index.js"></script>
+      <script type="module" src="../scripts/workerDetails/getDetails.js"></script>
+      <script type="module" src="../scripts/workerDetails/index.js"></script>
+      <script type="module" src="../scripts/workerSkills/postSkill.js"></script>
+      <script type="module" src="../scripts/workerSkills/getSkills.js"></script>
+      <script type="module" src="../scripts/logout/index.js"></script>
+
+      <script>
+        function openPage(pageName,elmnt) {
+            if (pageName == 'Home') {
+                window.location.href = "../index.html";
+            }
+            
+            let i, tabcontent, tablinks;
+            let tablinksHamburger;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            tablinks = document.getElementsByClassName("tablink");
+            tablinksHamburger = document.getElementsByClassName("tablinksHamburger");
+
+            for (i = 0; i < tabcontent.length; i++) {
+                tablinks[i + 1].style.backgroundColor = "";
+                tabcontent[i].style.display = "none";
+            }
+            document.getElementById(pageName).style.display = "flex";
+            elmnt.style.backgroundColor = "var(--orange-yellow)";
+        }
+        
+        document.getElementById("defaultOpen").click();
+        // document.getElementById("defaultOpenHamburger").click();
+        </script>
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../styles/reviews/review.css">
+    <script src="https://kit.fontawesome.com/135aab77de.js" crossorigin="anonymous"></script>
+    <title>Review Page</title>
+</head>
+<body>
+    <div class="review-container">
+        <div id="sections">
+            <section>
+                <h1>Stars</h1>
+                <div class="star-rating" style="color: #F7C515;">
+                    <i class="fa-regular fa-star fa-2xl" id="star1"></i>
+                    <i class="fa-regular fa-star fa-2xl" id="star2"></i>
+                    <i class="fa-regular fa-star fa-2xl" id="star3"></i>
+                    <i class="fa-regular fa-star fa-2xl" id="star4"></i>
+                    <i class="fa-regular fa-star fa-2xl" id="star5"></i>
+                </div>
+            </section>
+            <section>
+                <h1>Comment</h1>
+                <textarea id="comments" rows="4" cols="50"></textarea>
+                <br>
+            </section>
+        </div>
+        <button id="saveButton" class="solid-button">Save</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const stars = document.querySelectorAll('.star-rating .fa-star');
+            let rating = 0;
+
+            stars.forEach((star, index) => {
+                star.addEventListener('click', () => {
+                    rating = index + 1;
+                    stars.forEach((s, i) => {
+                        if (i < rating) {
+                            s.classList.remove('fa-regular');
+                            s.classList.add('fa-solid');
+                        } else {
+                            s.classList.remove('fa-solid');
+                            s.classList.add('fa-regular');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+<script type="module" src="../scripts/review/postReview.js"></script>
+</body>
+</html>

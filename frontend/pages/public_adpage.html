@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../styles/adpage/index.css">
+    <script src="https://kit.fontawesome.com/135aab77de.js" crossorigin="anonymous"></script>
+    <title>Ad Page</title>
+</head>
+<body>
+    <script type="module" src="../scripts/publicAdpage/adInfo.js"></script>
+    <div style="width: 100%; display: flex; align-items: center; flex-direction: column; padding-top: 20px; padding-bottom: 20px;">
+        <div>
+            <div id="ad_section">
+                <img style="height: 400px;" id="ad_img" src="../assets/images/hero_img.png" alt="Ad img">
+                <h1 id="title"></h1>
+                <p id="description"></p>
+
+                <div id="categories_list">
+                    <div class="category"></div>
+                </div>
+            </div>
+            <div style="display: flex; align-items: start; flex-direction: column;">
+                <input id="offer" style="width: 500px; margin-bottom: 10px;" type="number">
+                <button id="makeOfferButton" class="solid-button">Make an offer</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

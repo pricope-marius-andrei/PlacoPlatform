@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/login/login.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="icon" type="image/x-icon" href="../assets/images/logo.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Login</title>
+</head>
+<body class="login-page">
+
+        <form action="/">
+            <img src="../assets/images/logo.png" alt="Logo of the page" class="logo"> 
+            <h1>Login</h1>
+
+            <div class="input_box">
+                <h3>Email</h3>
+                <div class="wrapper">
+                    <input type="text" placeholder="Type your email" required id="emailLogin">
+                    <i class='bx bx-user'></i>
+                </div>
+            </div>
+
+            <div class="input_box">
+                <h3>Password</h3>
+                <div class="wrapper">
+                    <input type="password" placeholder="Type your password" id="password" required>
+                    <i class='bx bx-lock-alt' id="lock"></i>
+                </div>
+            </div>
+
+            <div class="forgot_password">
+                <a href="./forgot.html">Forgot password?</a>
+            </div>
+
+            <div class="btn">
+                <button type="submit" class="solid-button" id="loginButton">LOGIN</button>
+                <a href="register.html" class="trasparent-button" id="register_button">REGISTER</a>
+            </div>
+
+        </form>
+
+        <script src="../scripts/login/index.js"></script>
+
+        <script>
+            let password = document.getElementById("password");
+            let lock = document.getElementById("lock");
+            lock.addEventListener("click", () => {
+                if (password.type == 'password') {
+                    lock.className = 'bx bx-lock-open-alt';
+                    password.type = 'text';
+                }
+                else {
+                    lock.className = 'bx bx-lock-alt';
+                    password.type = 'password';
+                }
+            });
+        </script>
+    
+</body>
+</html>

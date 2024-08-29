@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/admin/admin.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="icon" type="image/x-icon" href="../assets/images/logo.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Admin</title>
+</head>
+<body class="admin_body">
+
+    <button class="tablinkadmin" onclick="openPage('Home', this)"><i class='bx bxs-home'></i></button>
+    <button class="tablinkadmin" onclick="openPage('DASHBOARD', this)" id="defaultOpen">DASHBOARD</button>
+    <button class="tablinkadmin" onclick="openPage('SETTINGS', this)">SETTINGS</button>
+
+    <div id="DASHBOARD" class="tabcontentadmin work_admin">
+        <div id="dashboard" style="margin-top: 200px; width: 100%;">
+            <div class="search_bar_admin all_mails_admin">
+              <input type="text" placeholder="Search work" class="search_input_admin">
+              <i class='bx bx-search search_icon_admin'></i>
+            </div>
+            <div id="users">
+
+            </div>
+            <script type="module" src="../scripts/admin/users.js"></script>
+        </div>  
+             
+    </div>
+
+    <div id="SETTINGS" class="tabcontentadmin inbox_admin">
+        <div class="profile_details">
+          <div class="input_settings">
+            <label for="changeEmail" class="email">Email</label>
+            <input type="email" placeholder="Enter new email" class="changeEmail" id="email-input">
+          </div>
+          <div class="input_settings">
+            <label for="currentPass" class="changePassword">Change Password</label>
+            <input type="text" placeholder="Enter your current password" class="currentPass" id="currentPass-input">
+            <input type="text" placeholder="Enter your new password" class="newPass" id="newPass-input">
+          </div>
+          <button class="solid-button" id="btnSave">Save Changes</button>
+        </div>
+        <button class="logoutbutton" id="logoutButton">Logout</button>
+    </div>
+
+    <script type="module" src="../scripts/changePass/client/index.js"></script>
+    <script type="module" src="../scripts/logout/index.js"></script>
+
+    <script>
+        function openPage(pageName,elmnt) {
+            if (pageName == 'Home') {
+                window.location.href = "../index.html";
+            }
+
+            let i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontentadmin");
+            tablinks = document.getElementsByClassName("tablinkadmin");
+
+            for (i = 0; i < tabcontent.length; i++) {
+                tablinks[i + 1].style.backgroundColor = "";
+                tabcontent[i].style.display = "none";
+            }
+            document.getElementById(pageName).style.display = "flex";
+            elmnt.style.backgroundColor = "var(--orange-yellow)";
+        }
+        
+        document.getElementById("defaultOpen").click();
+        </script>
+    
+</body>
+</html>

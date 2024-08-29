@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/register/register.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="icon" type="image/x-icon" href="../assets/images/logo.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Register</title>
+</head>
+<body class="register-page">
+
+        <form action="/">
+            <img src="../assets/images/logo.png" alt="Logo of the page" class="logo"> 
+            <h1>Register</h1>
+
+            <div class="input_box">
+                <h3>Email</h3>
+                <div class="wrapper">
+                    <input type="email" placeholder="Type your email" required id="emailRegister">
+                    <i class='bx bx-user'></i>
+                </div>
+            </div>
+
+            <div class="input_box">
+                <h3>Phone</h3>
+                <div class="wrapper">
+                    <input type="tel" placeholder="Type your phone" required id="phoneRegister">
+                    <i class='bx bx-phone'></i>
+                </div>
+            </div>
+
+            <div class="input_box">
+                <h3>Password</h3>
+                <div class="wrapper">
+                    <input autocomplete="on" type="password" placeholder="Type your password" id="password_first" required>
+                    <i class='bx bx-lock-alt' id="lock1"></i>
+                </div>
+            </div>
+
+            <div class="input_box">
+                <h3>Password</h3>
+                <div class="wrapper">
+                    <input autocomplete="on" type="password" placeholder="Type your password" id="password_second" required>
+                    <i class='bx bx-lock-alt' id="lock2"></i>
+                </div>
+            </div>
+
+            <div class="select_type">
+                <select id="userType">
+                    <option value="Client">Client</option>
+                    <option value="Worker">Worker</option>
+                </select>
+            </div>
+
+            <div class="btn">
+                <a href="login.html" class="solid-button">LOGIN</a>
+                <a href="register.html" class="trasparent-button" id="registerButton">REGISTER</a>
+            </div>
+
+        </form>
+
+        <script src="../scripts/register/index.js"></script>
+
+        <script>
+            let password = document.getElementById("password_first");
+            let lock = document.getElementById("lock1");
+
+            let passworda = document.getElementById("password_second");
+            let locka = document.getElementById("lock2");
+
+            lock.addEventListener("click", () => {
+                if (password.type == 'password') {
+                    lock.className = 'bx bx-lock-open-alt';
+                    password.type = 'text';
+                }
+                else {
+                    lock.className = 'bx bx-lock-alt';
+                    password.type = 'password';
+                }
+            });
+
+            locka.addEventListener("click", () => {
+                if (passworda.type == 'password') {
+                    locka.className = 'bx bx-lock-open-alt';
+                    passworda.type = 'text';
+                }
+                else {
+                    locka.className = 'bx bx-lock-alt';
+                    passworda.type = 'password';
+                }
+            });
+        </script>
+    
+</body>
+</html>

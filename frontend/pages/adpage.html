@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../styles/adpage/index.css">
+    <script src="https://kit.fontawesome.com/135aab77de.js" crossorigin="anonymous"></script>
+    <title>Ad Page</title>
+</head>
+<body>
+    <script type="module" src="../scripts/adpage/adInfo.js"></script>
+    <div id="edit_page">
+        <div id="ad_section">
+            <img id="ad_img" src="#" alt="Ad img">
+            <input id="title" placeholder="Add title">
+            <textarea id="description" placeholder="Add description"></textarea>
+            
+            <div id="categories">
+                <input id="category_input" placeholder="Add new category">
+                <button id="new_category"><i class="fa-solid fa-plus"></i></button>
+            </div>
+
+            <div id="categories_list">
+                <div class="category"></div>
+            </div>
+            
+            <button id="save_button" class="solid-button">Save changes</button>
+        </div>
+        
+        <section id="workers_list">
+            <h1>Workers list</h1>
+            <div id="list">
+                <script type="module" src="../scripts/adpage/workersList.js"></script>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
